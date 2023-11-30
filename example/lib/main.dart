@@ -33,10 +33,8 @@ class _MyAppState extends State<MyApp> {
             onPressed: () async {
               try {
                 final result = await _nativeRssParserPlugin.parseRss(
-                    "https://www.nasa.gov/rss/dyn/breaking_news.rss");
-                var json = jsonDecode(result);
-                print(json);
-                print(json.length);
+                    "https://ain.ua/feed/");
+                print(result);
               } on PlatformException catch (e) {
                 print(e.message);
               }

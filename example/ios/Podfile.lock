@@ -1,0 +1,35 @@
+PODS:
+  - FeedKit (9.1.2)
+  - Flutter (1.0.0)
+  - integration_test (0.0.1):
+    - Flutter
+  - native_rss_parser (0.0.1):
+    - FeedKit (~> 9.0)
+    - Flutter
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - integration_test (from `.symlinks/plugins/integration_test/ios`)
+  - native_rss_parser (from `.symlinks/plugins/native_rss_parser/ios`)
+
+SPEC REPOS:
+  trunk:
+    - FeedKit
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  integration_test:
+    :path: ".symlinks/plugins/integration_test/ios"
+  native_rss_parser:
+    :path: ".symlinks/plugins/native_rss_parser/ios"
+
+SPEC CHECKSUMS:
+  FeedKit: 71653273ab08e618cd6fd1301ca08fc02dca6a9e
+  Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
+  integration_test: 13825b8a9334a850581300559b8839134b124670
+  native_rss_parser: 9ac30a7ca03c2a7c2fe4ef16246de653b581647e
+
+PODFILE CHECKSUM: 70d9d25280d0dd177a5f637cdb0f0b0b12c6a189
+
+COCOAPODS: 1.12.0
