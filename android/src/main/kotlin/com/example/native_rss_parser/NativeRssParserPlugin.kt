@@ -12,6 +12,8 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import org.json.JSONArray
 import org.json.JSONObject
+import java.time.ZonedDateTime
+import java.time.format.DateTimeFormatter
 
 class NativeRssParserPlugin : FlutterPlugin, MethodCallHandler {
     private lateinit var channel: MethodChannel
@@ -52,7 +54,7 @@ class NativeRssParserPlugin : FlutterPlugin, MethodCallHandler {
             jsonObject.put("title", article.title)
             jsonObject.put("author", article.author)
             jsonObject.put("link", article.link)
-            jsonObject.put("pubDate", article.pubDate)
+            jsonObject.put("pubDate", ZonedDateTime.parse(article.pubDate, DateTimeFormatter.RFC_1123_DATE_TIME))
             jsonObject.put("description", article.description)
             jsonObject.put("content", article.content)
             jsonObject.put("image", article.image)

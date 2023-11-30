@@ -4,7 +4,7 @@ class RssFeedItem {
   final String? description;
   final String? link;
   final String? author;
-  final String? pubDate;
+  final DateTime? pubDate;
 
   final String? enclosure;
 
@@ -23,7 +23,7 @@ class RssFeedItem {
         description: json['description'],
         link: json['link'],
         author: json['author'],
-        pubDate: json['pubDate'],
+        pubDate: DateTime.tryParse(json['pubDate']),
         enclosure: json['enclosure'],
         guid: json['guid']);
   }
@@ -34,7 +34,7 @@ class RssFeedItem {
         description: json['description'],
         link: json['link'],
         author: json['author'],
-        pubDate: json['pubDate'],
+        pubDate: DateTime.tryParse(json['pubDate']),
         enclosure: json['image'],
         guid: json['guid']);
   }

@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:io';
 
 import 'package:flutter/material.dart';
 
@@ -35,6 +36,9 @@ class _MyAppState extends State<MyApp> {
                 final result = await _nativeRssParserPlugin.parseRss(
                     "https://ain.ua/feed/");
                 print(result);
+                for (var item in result){
+                  print(item.pubDate);
+                }
               } on PlatformException catch (e) {
                 print(e.message);
               }
